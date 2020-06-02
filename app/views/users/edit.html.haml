@@ -1,0 +1,17 @@
+.listeditPage
+  .container
+    = form_with model: @user, url: { action: :update }, html: { class: "mt-5, signupForm" }, local: true do |f|
+      /
+        <haml_silent> if @user.errors.any? </haml_silent><haml_block>
+        <p class="text-danger">タイトルは1～255文字以内で入力してください</p>
+        </haml_block>      <haml_loud> f.label :title </haml_loud>
+        <haml_loud> f.text_field :title, class: &quot;form-control listName&quot;, placeholder: &quot;リスト名&quot; </haml_loud>
+      .form-group
+        = f.label :name
+        = f.text_field :name, class: "form-control", placeholder: "名前を入力してください"
+      .form-group
+        = f.label :email
+        = f.email_field :email, class: "form-control", placeholder: "emailを入力してください" ,autocomplete: "email"
+      .text-center= f.submit "編集する", class: " btn submitBtn"
+      .text-center= link_to "トップページに戻る", root_path, class: "btn submitBtn"
+      .text-center= link_to "ログアウト", destroy_user_session_path, class: "btn submitBtn", method: :delete
