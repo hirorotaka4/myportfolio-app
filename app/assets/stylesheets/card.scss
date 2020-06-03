@@ -1,0 +1,44 @@
+.cardWrapper {
+  overflow-y: scroll;
+  max-height: 76vh;
+  .cardDetail_link {
+    text-decoration: none;
+    color: #323232;
+  }
+  .card {
+    // margin-bottom: 10px;
+    // padding: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 25px;
+    box-sizing: border-box;
+    &_title {
+      font-size: 17px;
+    }
+    &_detail {
+      display: none;
+      &.is-exist {
+        display: block;
+        color: #999;
+        & > i {
+          display: block;
+        }
+      }
+    }
+  }
+  .addCard {
+    color: #8c8c8c;
+    &_link {
+      color: #8c8c8c;
+    }
+  }
+}
