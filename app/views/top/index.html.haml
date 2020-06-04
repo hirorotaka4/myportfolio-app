@@ -1,3 +1,6 @@
+.topNav
+  .navTime
+    = "#{@now.strftime("今日は%m月%d日(#{%w(日 月 火 水 木 金 土)[@now.wday]})です。")}"
 .topPage
   .listWrapper
     - @lists.each do |list|
