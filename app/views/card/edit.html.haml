@@ -8,7 +8,7 @@
         = f.text_field :title, class: "form-control", placeholder: "カード名"
       .cardeditForm_memo
         = f.label :memo
-        = f.text_area :memo, class: "form-control", placeholder: "詳細"
+        = f.text_area :memo, class: "form-control memo", placeholder: "詳細"
       .cardeditForm_memo
         %label リスト名
         = select :card, :list_id, @lists.map{ |l| [l.title, l.id] }, {}, { class: 'form-control' }

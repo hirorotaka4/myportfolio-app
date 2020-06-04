@@ -1,15 +1,13 @@
 .cardnewPgae
   .container
-    = form_with model: @card, url: { action: :create }, html: { class: 'new_list' }, local: true do |f|
+    = form_with model: @card, url: { action: :create }, html: { class: 'cardeditForm' }, local: true do |f|
       = f.hidden_field :list_id, value: @list.id
       - if @card.errors.any?
         %p.text-danger タイトルは1～255文字以内で入力してください
-      .field
-        .field-label
-          = f.label :title
-          = f.text_field :title, autofocus: true, class: "listName", placeholder: "カード名"
-        .field-label
-          = f.label :memo
-          = f.text_area :memo, autofocus: true, class: "listName", placeholder: "詳細"
-        .text-center
-          = f.submit "作成する", class: "submitBtn"
+      .cardeditForm_title
+        = f.label :title
+        = f.text_field :title, class: "form-control", placeholder: "カード名"
+      .cardeditForm_memo
+        = f.label :memo
+        = f.text_area :memo, class: "form-control memo", placeholder: "詳細"
+      .text-center= f.submit "作成する", class: "submitBtn"
