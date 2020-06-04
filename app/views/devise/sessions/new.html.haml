@@ -1,17 +1,34 @@
-.signinPage
-  .container
-    %h2.title SURU::KOTOにサインイン
-    .text-center.m-3 or
-    .text-center= render "devise/shared/links"
-    = form_with scope: resource, as: resource_name, url: session_path(resource_name), html: { class: "mt-5, new_user" }, local: true do |f|
-      .form-group
-        = f.label :email
+#account-page.account-page
+  .account-page__inner.clearfix
+    .account-page__inner--left.account-page__header
+      %h2 
+        SURU::KOTOに
         %br/
-        = f.email_field :email, autofocus: true, class: "form-control", autocomplete: "email", placeholder: "emailを入力してください"
-      .form-group
-        = f.label :password
-        %br/
-        = f.password_field :password, class: "form-control", autocomplete: "off", placeholder: "パスワードを入力してください"
-      .form-group.text-center
-        = f.submit "サインイン", class: "loginBtn"
-
+        サインイン
+      %h5 登録しているユーザーでログイン
+      = render "devise/shared/links"
+    .account-page__inner--right.user-form
+      = form_with scope: resource, as: resource_name, url: session_path(resource_name), local: true do |f|
+        .field
+          .field-label
+            = f.label :email
+            %i 
+              %br/
+              『テストアカウント用 emailアドレス』
+              %br/
+              aaaa@gmail.com
+          .field-input
+            = f.email_field :email, autofocus: true, placeholder: "emailを入力してください"
+          .field
+            .field-label
+              = f.label :password
+              %i 
+                (英数字5文字以上)
+                %br/
+                『テストアカウント用 password』
+                %br/
+                1234567
+            .field-input
+              = f.password_field :password, autocomplete: "off", placeholder: "パスワードを入力してください"
+          .actions
+            = f.submit "Log in", class: 'btn'

@@ -10,6 +10,7 @@ class ListController < ApplicationController
     if @list.save
       redirect_to :root
     else
+      @list.valid?
       render action: :new
     end
   end
@@ -21,6 +22,7 @@ class ListController < ApplicationController
     if @list.update_attributes(list_params)
       redirect_to :root
     else
+      @list.valid?
       render action: :edit
     end
   end

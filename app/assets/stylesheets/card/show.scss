@@ -1,7 +1,13 @@
 .carddetailPage {
   .cardContents {
-    margin: 60px auto 0;
-    max-width: 600px;
+    // margin: 60px auto 0;
+    // max-width: 600px;
+    width: 700px;
+    margin: 60px auto;
+    padding: 60px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     &_title {
       h2 {
         font-size: 22px;
@@ -21,7 +27,7 @@
         &.edit_btn {
           max-width: 200px;
           margin: 0 auto;
-          background: #026aa7;
+          background: teal;
           padding: 7px;
           border-radius: 10px;
           color: #fff;
@@ -33,6 +39,9 @@
         }
         &.delete_btn {
           margin-top: 20px;
+          text-decoration: none;
+          color: rgb(184, 178, 178);
+          font-weight: bold;
         }
       }
     }

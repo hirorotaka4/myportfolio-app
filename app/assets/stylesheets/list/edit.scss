@@ -1,6 +1,24 @@
 .listeditPage {
-  .listForm {
-    max-width: 500px;
-    margin: 100px auto 0;
+  .container {
+    width: 700px;
+    margin: 60px auto;
+    padding: 60px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
   }
+  .new_list {
+    margin: 0 auto;
+    // line-height: 50px;
+    // height: 50px;
+  }
+}
+.listName {
+  width: 400px;
+  line-height: 50px;
+}
+.field-label {
+  font-size: large;
+  font-weight: bold;
+  margin-bottom: 10px;
 }

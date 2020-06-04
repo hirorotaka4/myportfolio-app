@@ -1,0 +1,14 @@
+// button
+.submitBtn {
+  background: teal;
+  color: #fff;
+  width: 200px;
+  margin-top: 50px;
+  padding: 10px;
+  border-radius: 90px;
+  transition: opacity 0.5s;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.6;
+  }
+}
