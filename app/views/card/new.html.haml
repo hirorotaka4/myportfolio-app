@@ -5,9 +5,10 @@
       - if @card.errors.any?
         %p.text-danger タイトルは1～255文字以内で入力してください
       .cardeditForm_title
-        = f.label :title
+        = f.label "タイトル"
         = f.text_field :title, class: "form-control", placeholder: "カード名"
       .cardeditForm_memo
-        = f.label :memo
+        = f.label "メモ"
         = f.text_area :memo, class: "form-control memo", placeholder: "詳細"
-      .text-center= f.submit "作成する", class: "submitBtn"
+      .text-center
+        = f.submit "作成する", class: "submitBtn"

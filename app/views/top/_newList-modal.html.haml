@@ -1,0 +1,13 @@
+#newList-modal.newList-modal-wrapper
+  .modal
+    .close-modal
+      %i.fa.fa-2x.fa-times
+    .newList-container
+      %h2.listText 
+        リストを作成
+      = form_with model: @list, url: {controller: :list, action: :create }, class: "new_list", local: true do |f|
+        .newList-field
+          .newList-fieldInput
+            = f.text_field :title, autofocus: true, class: "listName-modal", placeholder: "リスト名"
+        .text-center
+          = f.submit "作成", class: "submitBtn"
