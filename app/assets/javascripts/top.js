@@ -24,7 +24,7 @@ $(function () {
     }
   );
 
-  $(".listIcon").hover(
+  $(".listIcon,.addCard a").hover(
     function () {
       $(this).css("color", "red");
     },
