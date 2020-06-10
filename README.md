@@ -1,24 +1,32 @@
-# README
+SURU::KOTO
+====
+https://surukoto.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+「カンバン型のタスク」を管理・共有できるアプリケーションです。
 
-Things you may want to cover:
+## 制作背景
+- タスク管理をする方法で、手帳やホワイトボードを使用して行っていたのですが
+- webアプリケーションで出来ることを知り、使用してみたところ非常に便利で感動を覚えました。
+- 自分もこういった管理ツールを作成して、いろいろな人がタスク管理を簡単に出来るようなものを
+- 作ってみたく開発を行っています。
 
-* Ruby version
+## 機能
+- 新規登録・ログイン・ログアウト
+- 「リスト」投稿・編集・削除
+- 「カード」投稿・編集・削除
+- 「リスト内のカード」を編集で並べ替え
 
-* System dependencies
+## 今後実装したい機能
+- 「カード」をドラッグ&ドロップで移動させる
+- グループ内でタスクを管理
+- 天気予報も確認できるようにする。
+- タスクについてのコメント機能
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用技術
+- Ruby
+- Ruby on Rails
+- jQuery
+- MySQL(開発環境)
+- PostgreSQL(本番環境)
+- Heroku
